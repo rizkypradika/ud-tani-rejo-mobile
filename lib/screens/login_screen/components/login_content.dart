@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:project_mobile/screens/login_screen/components/project_mobile/dashboard.dart';
 import 'package:project_mobile/utils/helper_functions.dart';
 import '../../../utils/constants.dart';
 import '../animations/change_screen_animation.dart';
@@ -55,11 +56,15 @@ class _LoginContentState extends State<LoginContent>
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 135, vertical: 16),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+             MaterialPageRoute(
+              builder: (context) => Dashboard()));
+        },
         style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 14),
+          padding: const EdgeInsets.symmetric(vertical: 14), backgroundColor: kSecondaryColor,
           shape: const StadiumBorder(),
-          primary: kSecondaryColor,
           elevation: 8,
           shadowColor: Colors.black87,
         ),
