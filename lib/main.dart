@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project_mobile/dashboard_screen/activities/home.dart';
 
-import 'splash_screen/splash_screen.dart'; // import file splash screen
+// import file splash screen
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Ganti Splash Screen menjadi halaman awal
-      home: SplashScreen(),
+      home: HomePage(),
     );
   }
 }
