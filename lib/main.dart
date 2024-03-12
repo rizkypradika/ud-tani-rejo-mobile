@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'screens/login_screen/login_screen.dart';
+import 'splash_screen/splash_screen.dart'; // import file splash screen
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
+    return MaterialApp(
+      // Ganti Splash Screen menjadi halaman awal
+      home: SplashScreen(),
     );
   }
 }
