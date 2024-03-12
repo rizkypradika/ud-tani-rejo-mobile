@@ -32,7 +32,7 @@ class _DashboardState extends State<Dashboard> {
           title: Text("Lahan B"),
         ),
         ListTile(
-          title: Text("Lahab C"),
+          title: Text("Lahan C"),
         ),
       ],)
     ),

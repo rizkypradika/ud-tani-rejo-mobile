@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:project_mobile/dashboard_screen/activities/home.dart';
 import 'package:project_mobile/screens/login_screen/components/project_mobile/dashboard.dart';
 import 'package:project_mobile/utils/helper_functions.dart';
 import '../../../utils/constants.dart';
@@ -60,7 +61,7 @@ class _LoginContentState extends State<LoginContent>
           Navigator.push(
             context,
              MaterialPageRoute(
-              builder: (context) => Dashboard()));
+              builder: (context) => HomePage()));
         },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 14), backgroundColor: kSecondaryColor,
