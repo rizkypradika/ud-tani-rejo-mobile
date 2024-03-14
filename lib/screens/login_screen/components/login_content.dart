@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:project_mobile/dashboard_screen/activities/home.dart';
-import 'package:project_mobile/screens/login_screen/components/project_mobile/dashboard.dart';
 import 'package:project_mobile/utils/helper_functions.dart';
 import '../../../utils/constants.dart';
 import '../animations/change_screen_animation.dart';

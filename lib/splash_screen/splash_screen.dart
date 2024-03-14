@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../screens/login_screen/login_screen.dart';
+import 'package:project_mobile/login_page/pages/login_page.dart';
+
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => LoginPage(),
         ),
       );
     });
@@ -30,15 +31,15 @@ class _SplashScreenState extends State<SplashScreen> {
           children: <Widget>[
             Image.asset(
               'assets/images/logo.png',
-              width: 100, 
+              width: 100,
               height: 100,
             ),
             SizedBox(height: 24),
             Text(
-              'UD Tani Rejo',
+              'UD Tani Rejo Mobile',
               style: TextStyle(
                 fontSize: 24,
-                color: Colors.white,
+                color: const Color.fromARGB(255, 0, 0, 0),
               ),
             ),
           ],

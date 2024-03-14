@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-var category=[
+
+var category = [
   true,
   false,
   false,
@@ -7,16 +8,16 @@ var category=[
   false,
 ];
 var images = [
-  const AssetImage("assets/images/s2.jpeg"),
-  const AssetImage("assets/images/s4.jpeg"),
-  const AssetImage("assets/images/s3.jpeg"),
-  const AssetImage("assets/images/p1.jpeg"),
-  const AssetImage("assets/images/p3.jpeg"),
-  const AssetImage("assets/images/p4.jpeg"),
-  const AssetImage("assets/images/p5.jpeg"),
-  const AssetImage("assets/images/s1.jpeg"),
-  const AssetImage("assets/images/p6.jpeg"),
-  const AssetImage("assets/images/p2.jpeg"),
+  const AssetImage("assets/images/dashboard/varietaspadi.png"),
+  const AssetImage("assets/images/dashboard/s4.jpeg"),
+  const AssetImage("assets/images/dashboard/s3.jpeg"),
+  const AssetImage("assets/images/dashboard/p1.jpeg"),
+  const AssetImage("assets/images/dashboard/p3.jpeg"),
+  const AssetImage("assets/images/dashboard/p4.jpeg"),
+  const AssetImage("assets/images/dashboard/p5.jpeg"),
+  const AssetImage("assets/images/dashboard/s1.jpeg"),
+  const AssetImage("assets/images/dashboard/p6.jpeg"),
+  const AssetImage("assets/images/dashboard/p2.jpeg"),
 ];
 var ratting = [
   4.2,
@@ -31,9 +32,9 @@ var ratting = [
   4.8,
 ];
 var names = [
-  "Cappuccino",
-  "Espresso",
-  "Red Eye",
+  "Varietas Padi",
+  "Grade",
+  "Ketertelusuran",
   "Black Eye",
   "Americano",
   "Long Black",
@@ -41,7 +42,10 @@ var names = [
   "Macchiato",
   "Double",
 ];
-var with_=[
+var with_ = [
+  "Manajemen Varietas Padi",
+  "Manajemen Grade",
+  "Manajemen Ketertelusuran",
   "with Oat Milk",
   "with Chocolate",
   "with White Milk",
@@ -51,12 +55,8 @@ var with_=[
   "with Oat Milk",
   "with Chocolate",
   "with White Milk",
-  "with Oat Milk",
-  "with Chocolate",
-  "with White Milk",
-
 ];
-var prices=[
+var prices = [
   "4.20",
   "5.10",
   "2.86",
