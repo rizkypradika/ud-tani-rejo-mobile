@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:project_mobile/dashboard_screen/activities/details.dart';
 import 'package:flutter/material.dart';
 import '../res/resorces_list.dart';
@@ -14,17 +15,68 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 109, 86, 86),
+        title:  Text("Lahan A"),
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+        child: Column(
+          children: [
+            DrawerHeader(child:
+            Icon(Icons.apps,
+            size: 48,
+            
+            )
+            
+            ),
+            
+            ListTile(
+              title: const Text("DAFTAR LAHAN"),
+            ),
+            ListTile(
+              title: Text("LAHAN A"),
+              onTap: (){
+                Navigator.pop(context);
+                // Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+            ListTile(
+              // leading: Icon(Icons.settings),
+              title: Text("LAHAN B"),
+              onTap: () {
+                Navigator.pushNamed(context, '/settingpage');
+              },
+            ),
+             ListTile(
+              // leading: Icon(Icons.settings),
+              title: Text("LAHAN C"),
+              onTap: () {
+                Navigator.pushNamed(context, '/settingpage');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.add_box),
+              title: Text("Tambah Lahan"),
+              onTap: (){
+
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/homepage');
+              },
+            ),
+          ],),
+      ),
       bottomNavigationBar: bottom_navigation(),
       backgroundColor: Colors.black,
+
+      
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30, top: 60),
+        padding: const EdgeInsets.only(left: 30, right: 30, top: 40),
+        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            customDrawer(),
-            const SizedBox(
-              height: 20,
-            ),
+            // customDrawer(),
             const Text(
               "Find the best",
               style: TextStyle(
@@ -295,17 +347,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           ),
         ),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const FlutterLogo(
-              size: 35,
-            ),
-          ),
-        ),
+        
       ],
     );
   }
