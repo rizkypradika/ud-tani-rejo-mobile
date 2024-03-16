@@ -7,6 +7,7 @@ class TextFieldComponent extends StatelessWidget {
   final String hintText;
   final String prefixIconPath;
   final String? sufixIconPath;
+
   const TextFieldComponent({
     Key? key,
     required this.hintText,
@@ -17,6 +18,7 @@ class TextFieldComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      obscureText: sufixIconPath != null, // If sufixIconPath is provided, set obscureText to true
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(
@@ -32,11 +34,11 @@ class TextFieldComponent extends StatelessWidget {
           ),
         ),
         suffixIcon: sufixIconPath == null
-            ? const SizedBox()
+            ? null
             : Container(
                 margin: const EdgeInsets.symmetric(horizontal: 18.0),
                 child: SvgPicture.asset(
-                  "$sufixIconPath",
+                  sufixIconPath!,
                   height: 15,
                   width: 18,
                 ),
