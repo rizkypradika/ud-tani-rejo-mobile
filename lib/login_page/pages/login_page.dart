@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:project_mobile/dashboard_screen/activities/home.dart';
 import 'package:project_mobile/login_page/components/button_large.dart';
 import 'package:project_mobile/login_page/components/button_sosmed.dart';
 import 'package:project_mobile/login_page/components/text_field_component.dart';
@@ -88,7 +89,13 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 24),
-                      ButtonLarge(title: "Masuk", onPressed: () {}),
+                      ButtonLarge(title: "Masuk", onPressed: () {
+                        Navigator.pushReplacement( // Menggunakan pushReplacement agar tidak bisa kembali ke halaman login
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                      ),
                       const SizedBox(height: 18),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
