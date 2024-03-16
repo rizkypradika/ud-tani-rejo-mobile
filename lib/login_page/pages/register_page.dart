@@ -4,6 +4,7 @@ import 'package:project_mobile/login_page/components/button_sosmed.dart';
 import 'package:project_mobile/login_page/components/text_field_component.dart';
 import 'package:project_mobile/login_page/components/utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project_mobile/login_page/pages/login_page.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
@@ -33,7 +34,7 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: 240.0),
               Center(
                 child: Text(
-                  "Get Started Free",
+                  "DAFTAR SEKARANG",
                   style: TextStyle(
                     fontSize: 40,
                     color: clWhite,
@@ -43,7 +44,7 @@ class RegisterPage extends StatelessWidget {
               ),
               Center(
                 child: Text(
-                  "welcome back we missed you",
+                  "Daftarkan Akun anda ke UD TANI REJO MOBILE",
                   style: TextStyle(
                     fontSize: 14,
                     color: clGrey,
@@ -67,7 +68,7 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "Your Name",
+                "Username",
                 style: TextStyle(
                   fontSize: 14,
                   color: clGrey,
@@ -82,7 +83,7 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
               Text(
-                "Password",
+                "Kata Sandi",
                 style: TextStyle(
                   fontSize: 14,
                   color: clGrey,
@@ -93,7 +94,7 @@ class RegisterPage extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: "Password",
+                    hintText: "Kata Sandi",
                     hintStyle: TextStyle(
                       fontSize: 14,
                       color: clGrey,
@@ -121,7 +122,35 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 22),
-              ButtonLarge(title: "Sign Up", onPressed: () {}),
+              ButtonLarge(
+                title: "Daftar",
+                onPressed: () {
+                  // Navigasi ke halaman LoginPage dengan animasi
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      transitionDuration:
+                          Duration(milliseconds: 500), // Durasi animasi
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        const begin = Offset(1.0, 0.0);
+                        const end = Offset.zero;
+                        const curve = Curves.ease;
+
+                        var tween = Tween(begin: begin, end: end)
+                            .chain(CurveTween(curve: curve));
+
+                        return SlideTransition(
+                          position: animation.drive(tween),
+                          child: child,
+                        );
+                      },
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          LoginPage(),
+                    ),
+                  );
+                },
+              ),
               const SizedBox(height: 18),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,7 +160,7 @@ class RegisterPage extends StatelessWidget {
                     child: Image.asset("assets/images/line_left.png"),
                   ),
                   Text(
-                    "Or sign up with",
+                    "Atau Daftar Menggunakan",
                     style: TextStyle(
                       fontSize: 11,
                       color: clGrey,
